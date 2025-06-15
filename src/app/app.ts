@@ -3,10 +3,20 @@ import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrl: './app.css',
 })
 export class App {
-  protected title = 'angular-tut';
+  count: number = 0;
+
+  handleClick(val: string) {
+    if (val === 'plus') {
+      this.count++;
+    } else if (val === 'minus') {
+      this.count--;
+    } else if (val === 'reset') {
+      this.count = 0;
+    }
+  }
 }

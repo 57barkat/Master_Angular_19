@@ -1,0 +1,68 @@
+.counter-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Helvetica Neue', sans-serif;
+    margin-top: 100px;
+    color: #fff;
+}
+
+.counter-wrapper h1 {
+    font-size: 3rem;
+    margin-bottom: 30px;
+    background: linear-gradient(90deg, #ff416c, #ff4b2b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.counter-display {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    padding: 20px 40px;
+    background: #ff416c;
+    color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px -10px #ff416c;
+    transition: transform 0.3s ease;
+}
+
+.counter-display:hover {
+    transform: translateY(-5px);
+}
+
+.counter-actions {
+    display: flex;
+    gap: 20px;
+}
+
+.counter-actions .btn {
+    padding: 10px 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #ffffff;
+    background: linear-gradient(90deg, #ff416c, #ff4b2b);
+    border: none;
+    border-radius: 30px;
+    box-shadow: 0 5px 10px -5px #ff416c;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.counter-actions .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px -5px #ff416c;
+}
+
+.counter-actions .btn:active {
+    transform: translateY(0);
+    box-shadow: 0 5px 10px -5px #ff416c;
+}
+
+.counter-actions .reset {
+    background: linear-gradient(90deg, #ffbb33, #ff8800);
+}
+
+body {
+    margin: 0;
+    background: #121212;
+}
