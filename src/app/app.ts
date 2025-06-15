@@ -3,10 +3,18 @@ import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrl: './app.css',
 })
 export class App {
-  protected title = 'angular-tut';
+  dataType: string = 'barkat';
+  num: number = 0;
+  changeName() {
+    this.dataType = 'barkat Ullah khan khattak';
+    this.sum(5, 10);
+  }
+  sum(a: number, b: number) {
+    return (this.num = a + b);
+  }
 }
