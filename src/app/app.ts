@@ -3,10 +3,23 @@ import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrl: './app.css',
 })
 export class App {
-  protected title = 'angular-tut';
+  name = '';
+  displayName = '';
+  email = '';
+
+  getName(event: Event) {
+    this.name = (event.target as HTMLInputElement).value;
+  }
+
+  displayUsername() {
+    this.displayName = this.name;
+  }
+  getEmail(val: string) {
+    this.email = val;
+  }
 }
